@@ -47,14 +47,17 @@ function startGame(btns) {
 function createUserChoice(element) {
 	const userChoice = element.getAttribute('id')
 	const userChoiceImage = document.createElement('img')
+
 	userChoiceImage.src = `./images/${element.src.split('/').pop()}`
 	battleContainer.appendChild(userChoiceImage)
+
 	return userChoice
 }
 
 function createComputerChoice() {
 	const computerChoice = dice.roll()
 	const computerChoiceImage = document.createElement('img')
+
 	computerChoiceImage.src = images[computerChoice]
 	setTimeout(() => {
 		battleContainer.appendChild(computerChoiceImage)
