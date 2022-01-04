@@ -59,6 +59,7 @@ function createComputerChoice() {
 	const computerChoiceImage = document.createElement('img')
 
 	computerChoiceImage.src = images[computerChoice]
+
 	setTimeout(() => {
 		battleContainer.appendChild(computerChoiceImage)
 	}, 1000)
@@ -67,8 +68,10 @@ function createComputerChoice() {
 
 function renderVersus() {
 	const vs = document.createElement('img')
+
 	vs.src = './images/versus.png'
 	vs.setAttribute('id', 'versus')
+
 	setTimeout(() => {
 		battleContainer.appendChild(vs)
 	}, 500)
@@ -92,7 +95,7 @@ function evaluateBattle(p1, p2) {
 				break
 		}
 	}
-	// pape
+	// paper
 	if (p1 === '1') {
 		switch (p2) {
 			case 0:
@@ -109,7 +112,7 @@ function evaluateBattle(p1, p2) {
 				break
 		}
 	}
-	// scissor
+	// scissors
 	if (p1 === '2') {
 		switch (p2) {
 			case 0:
